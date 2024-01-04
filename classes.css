@@ -1,0 +1,573 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+  }
+  nav{
+    width:100%;
+    background-color: rgba(0,0,85,0.3);
+  }
+  nav ul{
+  
+    display: flex;
+    list-style:none;
+    justify-content:center;
+    padding:10px;
+    
+  }
+  nav ul a{
+    padding: 12px 32px;
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+    font-size:25px;
+    text-transform:uppercase;
+    font-family: jost,futura,gill sans,Arial,sans-serif;
+    font-weight: bold;
+   
+  }
+  
+  ul.drowpdown {
+    display: block;
+    background-color:  rgba(0,0,85,0.3);
+    
+  }
+  ul.drowpdown{
+    margin: 10px 0px;
+    
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  ul li a.exta{
+       color:#151B54;
+    
+       animation: fcolor 20s forwards;
+  }
+  
+  .drowpdown a{
+    
+    color:#fff;
+    animation: aclr 5s forwards;
+  }
+  .drowpdown a:hover{
+    color:#151B54;
+    
+  }
+  
+  .drowpdown li{
+    margin: 5px;
+  }
+  
+  ul li:hover ul.drowpdown{
+    display: block;
+    
+  }
+  body {
+    background: #ffffff;
+  }
+
+
+
+  .slides {
+    display: none;
+
+
+  }
+
+  .slides img {
+    height: 700px;
+    width: 100%;
+    /* vertical-align: middle; */
+  }
+
+
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0px 5px;
+    background-color: rgb(255, 255, 255);
+
+    margin-bottom: 15px;
+    border-radius: 50%;
+    display: inline-block;
+
+    transition: background-color 0.6s ease;
+
+  }
+
+  .active {
+    background-color: rgb(173, 163, 163);
+  }
+
+  .offline {
+    font-size: 60px;
+    text-align: right;
+    margin: 15px;
+    font-family: 'Playpen Sans', cursive;
+  }
+
+  .online {
+    font-size: 60px;
+    text-align: left;
+    margin: 15px;
+    font-family: 'Playpen Sans', cursive;
+  }
+
+  .clss_img1 img,
+  .clss_img2 img {
+    height: 300px;
+    width: 300px;
+    /* padding: 14px; */
+    border: 12px solid white;
+
+  }
+
+
+  .two_images {
+    display: inline-block;
+    flex: 2;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .offline_section {
+    display: flex;
+    background-color: rgb(226, 204, 204);
+    flex-wrap: wrap;
+  
+  }
+
+  .quote {
+    flex: 1;
+    text-align: center;
+   display:flex;
+    justify-content: center;
+
+  }
+  .blue{
+    width: 250px;
+    height: 369px;
+    border: 22px solid rgb(0, 0, 0);
+    position: relative;
+    margin-top:50px;
+  }
+  .pdiv p {
+    margin:55px;
+  }
+  .pdiv {
+    
+    margin-left: 76px;
+    position: absolute;
+    width: 250px;
+    height: 369px;
+    
+    background-color: antiquewhite;
+    font-size: 30px;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: bold;
+  
+    margin-top: 118px;
+  }
+
+
+
+  .last_sec {
+    padding: 75px;
+
+
+  }
+
+  span {
+
+    margin-left: 40px;
+
+  }
+
+  h2 {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 26px;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .teacher_name {
+    margin: auto;
+  }
+
+  .timing_sec h1 {
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Playpen Sans', cursive;
+  }
+
+  .batch_time {
+    display: flex;
+    padding: 25px;
+  }
+
+  .kids_part,
+  .adult_part {
+    flex: 1;
+    text-align: center;
+  }
+
+  .kids_part .kid,
+  .adult_part .adult {
+    padding: 14px;
+    font-size: 35px;
+  }
+
+  .kids_part p,
+  .adult_part p {
+    padding: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  .name h1 {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Playpen Sans', cursive;
+  }
+
+  .btn input {
+    padding: 10px 40px;
+    font-size: 20px;
+    background-color: rgb(226, 204, 204);
+    border-radius: 12px;
+    color: black;
+    cursor: pointer;
+    border: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+
+  .btn {
+    text-align: center;
+    padding: 20px;
+    margin-top: -45px;
+
+
+  }
+
+  .btn input:hover {
+    background: #000000;
+    color: white;
+  }
+
+  .teacher_sec {
+    background-color: rgb(53, 50, 50);
+    color: white;
+  }
+
+.online_sec {
+    display: flex;
+    background-color: rgb(226, 204, 204);
+
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+  }
+
+  video {
+    width: 600px;
+    padding: 14px;
+    border-radius: 50px;
+
+  }
+
+  .vdo_div {
+    display: inline-block;
+
+  }
+
+  .vdo {
+    text-align: center;
+
+  }
+
+
+
+
+
+  h3 {
+    font-size: 40px;
+    padding: 30px;
+   
+
+  }
+
+
+  #note {
+    font-size: 25px;
+    padding: 15px 15px;
+  }
+
+  .twobox {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-right: 25px;
+    text-align: center;
+  }
+  .footer{
+  background: #fff7ec;
+}
+.footer_content{
+  justify-content: center;
+  gap:60px;
+  display:flex;
+  flex-wrap:wrap;
+  border-top:5px solid black;
+}
+.footer_content ul ,a{
+  list-style: none;
+  text-decoration:none;
+}
+.footer_content li{
+  padding: 4px;
+  font-size: 18px;
+  color: #6c717a;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer_content h3{
+  padding: 20px 0px;
+  font-size: 25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.follow i{
+  padding: 10px;
+  font-size: 20px;
+}
+i:hover{
+  transform: scale(1.4);
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+}
+.flogo img{
+  height: 200px;
+  width: 200px;
+  mix-blend-mode: multiply;
+}
+.copy{
+  text-align: center;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
+  color: #6c717a;
+  padding-bottom: 50px;
+}
+@media only screen and (max-width:525px) {
+   .footer_content{
+     gap:10px;
+   }
+   .online_sec{
+    gap:0px;
+   }
+  }
+
+
+  @media screen and (max-width:1225px) {
+   
+
+    .vdo {
+      margin: auto;
+      margin-top: 0px;
+    }
+
+    .twobox {
+      margin: auto;
+    }
+
+  }
+
+  @media  only screen and (max-width:1141px) {
+    .offline_section {
+      flex-direction: column;
+      padding-bottom: 90px;
+    }
+  }
+  @media only screen and (max-width:1109px)and (min-width:50px) {
+
+    nav ul {
+  
+        flex-direction: column;
+        text-align: center;
+       
+    }
+  
+    ul li {
+        padding: 5px;
+  
+    }
+  
+   ul.drowpdown{
+    position:static;
+    margin: 0px;
+   }
+   .drowpdown li{
+  margin: 0px;
+  }
+  }
+  @media only screen and (max-width:922px) {
+    video {
+      height: auto;
+      width: 100%;
+      padding: 30px;
+    }
+
+    .online_sec {
+      flex-direction: column;
+
+    }
+  }
+
+
+
+  @media only screen and (max-width:841px) {
+    .quote_img img {
+      height: auto;
+      width: 100%;
+
+    }
+
+   
+  }
+
+  @media screen and (max-width:480px) {
+    .box {
+      height: auto;
+      width: 100%;
+      margin: auto;
+      margin-left: 10px;
+    }
+
+    .minibox {
+      height: auto;
+      width: 100%;
+    }
+
+   
+
+    .online {
+      font-size: 31px;
+    }
+
+    .offline {
+      font-size: 30px;
+    }
+
+    .clss_img img {
+      height: auto;
+      width: 100%;
+    }
+
+    .clss_img1 img {
+      height: auto;
+      width: 100%;
+    }
+
+    .clss_img2 img {
+      height: auto;
+      width: 100%;
+    }
+
+   
+
+    .vdo {
+      margin: 0px;
+    }
+
+    .slides img {
+      height: 200px;
+    }
+  }
+
+  @media only screen and (max-width:710px) {
+    .name h1 {
+      font-size: 60px;
+    }
+
+    .timing_sec h1 {
+      font-size: 50px;
+    }
+
+    .teacher_name h2 {
+      font-size: 25px;
+    }
+
+    span {
+      margin-left: 0;
+
+    }
+
+    .teacher_name {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width:510px) {
+
+    .batch_time {
+      /* flex-wrap: wrap; */
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .last_sec {
+      padding: 45px;
+    }
+  }
+
+  @media only screen and (max-width:730px) {
+    .slides img {
+      height: 350px;
+    }
+  }
+
+  @media only screen and (max-width:388px) {
+    .name h1 {
+      font-size: 30px;
+
+    }
+
+    .teacher_name h2 {
+      font-size: 15px;
+    }
+
+    .timing_sec h1 {
+      font-size: 30px;
+    }
+
+.slides img {
+      height: 200px;
+    }
+     .pdiv{
+      margin-left:0px;
+      width:230px;
+     }
+     .blue{
+      width:200px;
+     }
+  }
+
+  @media only screen and (max-width:280px) {
+    .btn input {
+      padding: 5px 30px;
+
+    }
+
+    .btn {
+      margin-top: -40px;
+    }
+  }

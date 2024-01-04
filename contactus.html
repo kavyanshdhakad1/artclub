@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 85, 0.3);
+        }
+
+        nav ul {
+
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            padding: 10px;
+
+        }
+
+        nav ul a {
+            padding: 12px 32px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            text-transform: uppercase;
+            font-family: jost, futura, gill sans, Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        ul.drowpdown {
+            display: block;
+            background-color: rgba(0, 0, 85, 0.3);
+        }
+
+        ul.drowpdown {
+            margin: 10px 0px;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a.exta {
+            color: #151B54;
+            animation: fcolor 20s forwards;
+        }
+
+        .drowpdown a {
+            color: #fff;
+            animation: aclr 5s forwards;
+        }
+
+        .drowpdown a:hover {
+            color: #151B54;
+        }
+
+        .drowpdown li {
+            margin: 5px;
+        }
+
+        ul li:hover ul.drowpdown {
+            display: block;
+        }
+
+        .main_form {
+            margin-top: 70px;
+         
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+          
+        }
+
+        input {
+            padding: 12px 20px;
+            margin: 8px;
+        }
+
+      
+
+        .forms {
+           display: flex;
+           justify-content: center;
+            background-image: url('https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139106.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698105600&semt=ais');
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+
+           
+            height: 700px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .name {
+            display: flex;
+        }
+
+        .emailtext input {
+            width: 384px;
+        }
+
+        .phone input {
+            width: 384px;
+        }
+
+        .label {
+            padding-left: 10px;
+        }
+
+        .text h2 {
+            text-align: center;
+            padding: 85px;
+            font-size: 40px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .text {
+            background: #a4ddf3;
+            color: black;
+
+        }
+
+        .paynow {
+            text-align: center;
+        }
+
+        .paynow input {
+            padding: 17px 75px;
+            font-size: 21px;
+            background-color: #b7aeae;
+            color: white;
+            border-radius: 5px;
+            border-style: none;
+            cursor: pointer;
+        }
+
+        .paynow input:hover {
+            background-color: #005bf2;
+        }
+
+        .formerror{
+                color:rgb(255, 0, 0);
+                font-size:14px;
+                font-family:monospace;
+                padding-left:20px;
+            }
+        @media only screen and (max-width:1109px)and (min-width:50px) {
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            ul li {
+                padding: 5px;
+            }
+
+            ul.drowpdown {
+                position: static;
+                margin: 0px;
+            }
+
+            .drowpdown li {
+                margin: 0px;
+            }
+        }
+
+        /* media queries */
+
+        @media  screen and (max-width:460px) {
+            .emailtext input {
+            width: 240px;
+        }
+.phone input {
+            width: 240px;
+        }
+            .forms{
+                height:530px;
+                text-align: center;
+            }
+            .name{
+                flex-direction: column;
+            }
+            .text h2{
+                padding:30px;
+                font-size:35px;
+            }
+
+            input{
+                width:240px;
+            }
+        } 
+        @media  screen and (max-width:310px) {
+            input{
+                padding:8px 6px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="nav_bar">
+        <nav>
+            <ul>
+                <li><a class="exta" href="art.html">Home</a></li>
+                <li><a class="exta" href="#">Learn▼</a>
+                    <ul class="drowpdown">
+                        <li><a href="courses.html">Course and Camps</a></li>
+
+                        <li><a href="classes.html">Online Classes & Activities</a></li>
+
+
+                    </ul>
+                </li>
+
+                <li><a class="exta" href="workshop.html">WorkShop</a></li>
+
+                <li><a class="exta" href="#">Art▼</a>
+                    <ul class="drowpdown">
+                        <li><a href="artwork.html">Gallery</a></li>
+                        <li><a href="Exibition.html">Exibition</a></li>
+                    </ul>
+
+                </li>
+
+                <li><a class="exta" href="aboutus.html">About Us</a></li>
+                <li><a class="exta" href="contactUs.html"> Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="text">
+        <h2>Need Help? Here's how you can reach us</h2>
+    </div>
+    <div class="forms">
+        <form action="/myaction.php" name="myform" onsubmit="return validateForm()" method="post">
+
+            <div class="main_form">
+                <div class="name">
+                    <div class="forfname">
+                        <div class="label">
+                            <label for="fname">First Name:</label>
+                        </div>
+                        <div class="ftext" id="name">
+                            <input type="text" placeholder="Enter Your First Name" required name="fname">
+                            <div class="formerror"></div>
+                        </div>
+                    </div>
+                    <div class="forlname">
+                        <div class="label">
+                            <label for="lname">Last Name:</label>
+                        </div>
+                        <div class="ltext" id="lastname">
+                            <input type="text" placeholder="Enter Your Last Name" name="lname">
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="foremail">
+                    <div class="label">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="emailtext" width="200px" id="email">
+                        <input type="email" placeholder="Enter Your Email" name="femail" required>
+                        <div class="formerror"></div>
+                    </div>
+                </div>
+                <div class="forphone">
+                    <div class="label">
+                        <label for="num">Phone No:</label>
+                    </div>
+                    <div class="phone" id="mobile">
+                        <input type="phone" placeholder="Enter Your Mobile" name="fphone" required>
+                        <div class="formerror"></div>
+                    </div>
+                </div>
+                <div class="pay">
+                    <div class="paynow" onclick="submit()">
+                        <input type="submit" value="Pay Now">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script>
+
+function setError(id, error) {
+            element = document.getElementById(id);
+            element.getElementsByClassName('formerror')[0].innerHTML = error;
+        }
+        function clearError() {
+         errors = document.getElementsByClassName('formerror');
+         for(let item of errors){
+            item.innerHTML = "";
+         }
+
+        }
+        function validateForm() {
+            var returnval = true;
+            clearError();
+            var name = document.forms['myform']["fname"].value;
+
+            if (name.length < 3) {
+                setError("name", "Name length is too short");
+                returnval = false;
+            }
+
+            var email = document.forms['myform']["femail"].value;
+
+            if (email.length > 35) {
+                setError("email", "Email length is too Long");
+                returnval = false;
+            }
+
+            var phone = document.forms['myform']["fphone"].value;
+
+            if (phone.length != 10) {
+                setError("mobile", "Phone Number is Not Valid");
+                returnval = false;
+            }
+            return returnval;
+        }
+        function submit(){
+            if (validateForm() == true) {
+                window.open("qrcode.html");
+            }
+        }
+    </script>
+</body>
+
+</html>

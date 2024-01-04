@@ -1,0 +1,341 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+nav{
+    width:100%;
+    background-color: rgba(0,0,85,0.3);
+  }
+  nav ul{
+  
+    display: flex;
+    list-style:none;
+    justify-content:center;
+    padding:10px;
+    
+  }
+  nav ul a{
+    padding: 12px 32px;
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+    font-size:25px;
+    text-transform:uppercase;
+    font-family: jost,futura,gill sans,Arial,sans-serif;
+    font-weight: bold;
+   
+  }
+  
+  ul.drowpdown {
+    display: block;
+    background-color:  rgba(0,0,85,0.3);
+    
+  }
+  ul.drowpdown{
+    margin: 10px 0px;
+    
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  ul li a.exta{
+       color:#151B54;
+    
+       animation: fcolor 20s forwards;
+  }
+  
+  .drowpdown a{
+    
+    color:#fff;
+    animation: aclr 5s forwards;
+  }
+  .drowpdown a:hover{
+    color:#151B54;
+    
+  }
+  
+  .drowpdown li{
+    margin: 5px;
+  }
+  
+  ul li:hover ul.drowpdown{
+    display: block;
+    
+  }
+.header {
+    background-image: url('https://www.wallpaperboulevard.com/Images/product/beige-white-modern-brick-non-textured-w-cgeg-l.jpg');
+
+    flex-direction: column;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 80px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagesone,
+.imagestwo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.imagesone img,
+.imagestwo img {
+    height: 200px;
+    width: 200px;
+    border: 20px solid #ffebd2;
+border-style: groove;
+}
+
+.img2,
+.img4 {
+    margin-top: 100px;
+
+}
+
+.artExibition {
+    padding: 40px;
+}
+
+.artExibition h1 {
+    font-size: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.artExibition h2 {
+    font-size: 120px;
+    background-image: url('https://media.istockphoto.com/id/1132799387/photo/roses-multicolored-flowers-on-a-sunny-day-outside-close-up-shot.jpg?s=2048x2048&w=is&k=20&c=FofK4Ybb8-jxOYQtlFip-_gfaWaudFrsYFudUsp7QxI=');
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: -85px;
+    position: relative;
+}
+
+.artExibition p {
+    font-size: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-style: italic;
+}
+
+.vdo-div {
+    text-align: center;
+    padding: 70px 0px;
+
+}
+
+iframe {
+    border-radius: 5%;
+
+}
+
+.invitation {
+    background-color: rgb(226, 204, 204);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+     flex-wrap:wrap;
+}
+
+.invi-photo img {
+    height: 350px;
+    width: 350px;
+    margin: 30px;
+    border: 8px solid white;
+    box-shadow: 3px 3px 40px white;
+}
+
+
+
+
+.upper-text h1 {
+    font-size: 65px;
+    color: rgb(73, 3, 3);
+    font-family: jost, futura, gill sans, Arial, sans-serif;
+    padding: 20px;
+  text-align: center;
+}
+
+.upper-text p ,h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    padding-left: 20px;
+    text-align: center;
+    color: rgb(133, 8, 8);
+}
+.footer{
+background: #fff7ec;
+}
+.footer_content{
+justify-content: center;
+gap:60px;
+display:flex;
+flex-wrap:wrap;
+border-top:5px solid black;
+
+
+}
+.footer_content ul ,a{
+list-style: none;
+text-decoration:none;
+}
+.footer_content li{
+padding: 4px;
+font-size: 18px;
+color: #6c717a;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer_content h3{
+padding: 20px 0px;
+font-size: 25px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.follow i{
+padding: 10px;
+font-size: 20px;
+}
+i:hover{
+transform: scale(1.4);
+transition: all 0.3s;
+cursor: pointer;
+background-color: white;
+border-radius: 50%;
+}
+.flogo img{
+height: 200px;
+width: 200px;
+mix-blend-mode: multiply;
+}
+.copy{
+text-align: center;
+font-size: 14px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 20px;
+color: #6c717a;
+padding-bottom: 50px;
+}
+/* media queries */
+
+@media only screen and (max-width:1109px)and (min-width:50px) {
+
+    nav ul {
+  
+        flex-direction: column;
+        text-align: center;
+       
+    }
+  
+    ul li {
+        padding: 5px;
+  
+    }
+  
+   ul.drowpdown{
+    position:static;
+    margin: 0px;
+   }
+   .drowpdown li{
+  margin: 0px;
+  }
+  }
+  
+     
+@media only screen and (max-width:525px) {
+.footer_content{
+gap:10px;
+}
+}
+@media screen and (max-width:1044px) {
+
+    .img2,
+    .img4 {
+        margin-top: 65px;
+    }
+}
+
+
+
+@media screen and (max-width:1100px) {
+    iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:592px) {
+    .artExibition h1 {
+        font-size: 100px;
+    }
+
+    .artExibition h2 {
+        font-size: 80px;
+        margin-top: -54px;
+    }
+
+    .artExibition {
+        padding: 10px;
+    }
+
+    .invi-photo img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:492px) {
+
+    .img2,
+    .img4 {
+        margin-top: 0px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .invi-photo img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .upper-text h1 {
+        font-size: 40px;
+    }
+
+    .artExibition h1 {
+        font-size: 75px;
+    }
+
+    .artExibition h2 {
+        font-size: 60px;
+        margin-top: -44px;
+    }
+
+
+.artExibition {
+        padding: 10px;
+    }
+
+}
+@media screen and (max-width:430px){
+    .invi-photo img{
+        margin: 0;
+    }
+}

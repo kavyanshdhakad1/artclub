@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/00443d2abd.js" crossorigin="anonymous"></script>
+
+    <style>
+        body:before {
+            content: "";
+            background-image: url('https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139106.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698105600&semt=ais');
+            position: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            filter: blur(3px);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .qrimg img {
+            height: 150px;
+            width: 150px;
+            margin-top: 15px;
+            margin-left: 25px;
+        }
+
+        .qrimg {
+            z-index: 1;
+            position: relative;
+            display: flex;
+            width: 120%;
+            height: 120%;
+        }
+
+
+
+        .logo {
+            display: flex;
+            gap: 8px;
+            margin: 10px;
+        }
+
+        .logo img {
+            height: 30px;
+            width: 30px;
+        }
+
+        #modal {
+            margin: 70px;
+            border-radius: 8px;
+            box-shadow: 1px 1px 5px black;
+            height: 100%;
+            width: 400px;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .QR {
+            display: flex;
+            border: 2px solid silver;
+            padding: 10px;
+            gap: 15px;
+
+
+            background-color: white;
+        }
+
+        .border {
+
+            position: absolute;
+            background-image: url('pngtree-minimalist-scan-code-border-png-image_5922052-removebg-preview.png');
+            background-repeat: no-repeat;
+            mix-blend-mode: multiply;
+            background-size: cover;
+            margin-top: -12px;
+            height: 180px;
+            width: 200px;
+            mix-blend-mode: multiply;
+        }
+
+        #time {
+            margin: 0px;
+            display: inline-block;
+            padding: 0px;
+            font-size: 25px;
+            /* font-family: math; */
+            font-style: italic;
+        }
+
+        .text p {
+            margin: 4px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #min {
+            display: inline-block;
+        }
+
+        #refresh_btn {
+            position: absolute;
+            top: 40%;
+            left: 25%;
+            display: none;
+
+        }
+
+        h1,
+        .upi_Id {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1 {
+            font-size: 18px;
+        }
+
+        .upi_Id {
+            margin-top: 7px;
+        }
+
+        #refresh_btn input:hover {
+            background-color: #0357de;
+        }
+
+        #refresh_btn input {
+            padding: 10px 20px;
+            border-radius: 100px;
+            background-color: #005bf2;
+            border-style: none;
+            color: white;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            cursor: pointer;
+        }
+
+        .upi_logo img {
+
+            height: 45px;
+            width: 45px;
+        }
+
+        .border-box {
+            border: 2px solid silver;
+            padding: 6px;
+            background-color: aliceblue;
+        }
+
+        #number {
+            display: flex;
+            gap: 5px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+#phone {
+            text-align: center;
+            display: none;
+        }
+
+        #phone input {
+            padding: 10px 6px;
+            font-size: 19px;
+            text-align: left;
+            width: 260px;
+
+        }
+
+        .check {
+            border-radius: 50%;
+            padding-top: 15px;
+            padding-left: 60px;
+
+
+        }
+
+        #check_icon {
+            /* background-color: rgb(254, 144, 0); */
+            color: white;
+            font-size: 14px;
+
+            border-radius: 50%;
+            background-color: rgb(168, 168, 168);
+        }
+
+        #check_icon i {
+            padding: 3px 4px;
+
+        }
+
+        .paynow {
+            text-align: right;
+        }
+
+        .pay {
+            padding-top: 30px;
+
+
+        }
+
+        .paynow input {
+            padding: 17px 75px;
+            font-size: 21px;
+            background-color: #005bf2;
+            color: white;
+            border-radius: 5px;
+            border-style: none;
+            cursor: pointer;
+        }
+
+        .paynow input:hover {
+            background-color: #0357de;
+        }
+
+
+
+
+        .header {
+            display: flex;
+            background-color: #005bf2;
+            color: white;
+            text-transform: uppercase;
+            box-shadow: 1px 7px 8px silver;
+        }
+
+        .header img {
+            mix-blend-mode: multiply;
+
+        }
+
+        .mainhead {
+            font-size: 30px;
+        }
+        .formerror{
+                color:rgb(255, 0, 0);
+                font-size:14px;
+                font-family:monospace;
+                padding-left:20px;
+                font-weight: bold;
+            }
+
+     
+        /* For styling demo, not required */
+        @media only screen and (max-width:460px){
+           .QR{
+              flex-wrap: wrap;
+           }
+        }
+        @media only screen and (max-width:315px){
+            #modal{
+                padding: 10px;
+            }
+        }
+        @media only screen and (max-width:420px){
+            #phone input{
+                width: 160px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="modal">
+            <div class="header">
+                <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-club-logo-design-template-7363f499d408b8d5aa636f25e135ce56_screen.jpg"
+                    alt="" height="80px" style="display:inline-block">
+                <h1 class="mainhead">Art Club</h1></span>
+            </div>
+            <h1>Pay With UPI/QR</h1>
+            <div class="QR">
+                <div class="qrimg">
+                    <img id="image" src="https://pngimg.com/d/qr_code_PNG33.png" alt="error">
+                    <div class="border"></div>
+                    <div id="refresh_btn">
+                        <input type="button" value="Refresh QR" onclick="btn()">
+                    </div>
+                </div>
+                <div class="qrtext">
+                    <div class="text">
+                        <p>Scan the QR code using any UPI app on your phone</p>
+
+
+                        <div class="logo">
+                            <img src="https://cdn.razorpay.com/app/googlepay.svg" alt="google_pay-app-logo"
+                                class="svelte-1ndsu9v">
+                            <img src="https://cdn.razorpay.com/app/phonepe.svg" alt="phonepe-app-logo"
+                                class="svelte-1ndsu9v">
+                            <img src="https://cdn.razorpay.com/app/paytm.svg" alt="paytm-app-logo"
+                                class="svelte-1ndsu9v">
+                            <img src="https://cdn.razorpay.com/app/bhim.svg" alt="bhim-app-logo" class="svelte-1ndsu9v">
+                        </div>
+
+                        <p>QR code is valid for </p>
+                        <h1 id="time">10:00</h1><span>
+                            <p id="min">minutes</p>
+
+</div>
+                </div>
+            </div>
+            <h1>Pay With UPI ID/ Mobile Number</h1>
+            <div class="border-box">
+                <div id="number" onclick="upi_no()">
+                    <div class="upi_logo">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-bhim-3-69845.png" alt="">
+                    </div>
+                    <div class="upi_Id">
+                        UPI ID/ Mobile Number
+                    </div>
+                    <div class="check">
+                        <!-- <input type="checkbox"> -->
+                        <div id="check_icon">
+
+                            <i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                        </div>
+                    </div>
+                </div>
+                <form action="/myaction.php" name="myform" onsubmit="return validateform()" method="post">
+                    <div id="phone">
+                        <input type="phone" placeholder=" Enter UPI ID/ Mobile Number" required name="fphone">
+                        <div class="formerror"></div>
+
+                    </div>
+                </div>
+                    <div class="pay">
+                        <div class="paynow" onclick="money()">
+                            <input type="submit" value="Pay Now">
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+        <!-- <div id="succeed"> -->
+        <!-- </div> -->
+
+        <script>
+            let minute = 0;
+            let seconds = 10;
+            setInterval(function () {
+                if (minute == 0 && seconds == 1) {
+                    document.getElementById("time").innerHTML = "00:00";
+                    document.getElementById("image").style.filter = "blur(2px)";
+                    document.getElementById("refresh_btn").style.display = "block";
+
+                }
+                else {
+                    seconds--;
+                    if (seconds == 0) {
+                        minute--;
+                        seconds = 10;
+
+
+                        if (minute == 0) {
+                            minute = minute;
+
+                        }
+
+                    }
+                    document.getElementById("time").innerHTML = minute + ":" + seconds;
+
+                }
+
+            }, 1000)
+
+            function btn() {
+                // document.getElementById("time").innerHTML = "1:00";
+                minute = 0;
+                seconds = 10;
+                document.getElementById("image").style.filter = "none";
+                document.getElementById("refresh_btn").style.display = "none";
+            }
+            function upi_no() {
+                document.getElementById("phone").style.display = "block";
+                document.getElementById("check_icon").style.background = "#0357de";
+                document.getElementById("phone").style.padding = "20px";
+            }
+
+
+        </script>
+        <script>
+            function setError(id, error) {
+                element = document.getElementById(id);
+                element.getElementsByClassName('formerror')[0].innerHTML = error;
+            }
+            function clearError() {
+                errors = document.getElementsByClassName('formerror');
+                for (let item of errors) {
+                    item.innerHTML = "";
+                }
+            }
+            function validateform() {
+                var returnval = true;
+                clearError();
+                var phone = document.forms['myform']["fphone"].value;
+                if (phone.length != 10) {
+                    setError("phone", "Phone Number is not valid");
+                    returnval = false;
+                }
+
+                return returnval;
+            }
+
+
+
+            function money() {
+                if (validateform() == true) {
+                    
+                    window.open("succeed.html");
+                }
+            }
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classes</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Averia+Sans+Libre:wght@300&family=Playpen+Sans:wght@500&family=Yanone+Kaffeesatz:wght@300&display=swap"
+    rel="stylesheet">
+ <link rel="stylesheet" href="classes.css">
+
+</head>
+
+<body>
+  <div class="nav_bar">
+    <nav>
+          <ul>
+              <li><a class="exta" href="art.html">Home</a></li>
+              <li><a class="exta" href="#">Learn▼</a>
+                  <ul class="drowpdown">
+                      <li><a href="courses.html">Course and Camps</a></li>
+  
+                      <li><a href="classes.html">Online Classes & Activities</a></li>
+  
+  
+                  </ul>
+              </li>
+  
+              <li><a  class="exta" href="workshop.html">WorkShop</a></li>
+  
+              <li><a  class="exta" href="#">Art▼</a>
+                  <ul class="drowpdown">
+                      <li><a href="gallery.html">Gallery</a></li>
+                      <li><a href="Exibition.html">Exibition</a></li>
+                  </ul>
+  
+              </li>
+  
+              <li><a  class="exta"href="aboutus.html">About Us</a></li>
+              <li><a  class="exta" href="contactus.html"> Contact Us</a></li>
+          </ul>
+      </nav>
+  </div>
+  <div class="slide_bg">
+    <div class="slide_container">
+      <div class="slides">
+        <img src="https://www.mchenry.edu/art/images/art-classes.jpg" alt="">
+      </div>
+      <div class="slides">
+        <img src="https://activeparents.ca/wp-content/uploads/2023/01/Halton-1024x538.webp" alt="">
+      </div>
+      <div class="slides">
+        <img src="https://bestofnj.com/wp-content/uploads/2017/08/AntonioDiaz-e1502854363330.jpeg" alt="">
+
+      </div>
+      <div class="slides">
+        <img src="https://neurahp.com/cdn/shop/files/55BE9A23-27B1-44A2-BDEE-39BDC9212D94.jpg?v=1689237574&width=3840"
+          alt="">
+      </div>
+      <div class="slides">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5eee90096bc04f5d1f0a1208/1593097912417-N9TREQ3GS3WFPJD1RYW9/IMG_5687.png">
+      </div>
+      <div class="slides">
+        <img src="https://durhamarts.org/wp-content/uploads/2023/04/Cover-Photo-DAC-Summer-Camp-1-scaled.jpg" alt="">
+      </div>
+
+
+    </div>
+    <br>
+
+    <div style="text-align: center;">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+  </div>
+
+  <script>
+    let index = 0;
+    slideshow();
+
+    function slideshow() {
+      let i;
+      let myslide = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < myslide.length; i++) {
+        myslide[i].style.display = "none";
+      }
+      index++;
+      if (index > myslide.length) { index = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      myslide[index - 1].style.display = "block";
+      dots[index - 1].className += " active";
+      setTimeout(slideshow, 1000);
+    }
+  </script>
+
+<h1 class="offline">OFFLINE CLASSES</h1>
+  <div class="offline_section">
+    <div class="two_images">
+      <div class="clss_img1">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/521cc57fe4b0ca58ed02b0ec/1524077346860-ZINGBAYIIHKN5VFP79QH/Kids_Paint_Hello_Rabbit.jpg"
+          alt="" data-aos="zoom-in" data-aos-duration="3000"   data-aos-once='true'>
+        <img src="https://newartcenter.org/wp-content/uploads/2022/06/IMG_49522-scaled.jpg" alt="" class="clss_img"
+          data-aos="zoom-in" data-aos-duration="3000"  data-aos-once='true'>
+      </div>
+
+
+      <div class="one_image">
+        <div class="clss_img2" data-aos="zoom-in" data-aos-duration="3000"  data-aos-once='true' ><img
+            src="https://images.squarespace-cdn.com/content/v1/521cc57fe4b0ca58ed02b0ec/1524077763990-PJCE9U8T0H0PSXCZ7XZO/Student_Painting.jpg"
+            alt=""></div>
+      </div>
+    </div>
+    <div class="quote">
+    
+
+           <div class="blue">
+            
+           </div>
+        <div class="pdiv">
+          <p>We'll use <br>step-by-step <br> guides to <br>learn to draw.<br>_____.....</p>
+        </div>
+      
+
+    </div>
+
+  </div>
+
+  <h1 class="online">ONLINE CLASSES</h1>
+
+
+  <div class="online_sec">
+    <div class="twobox" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
+
+      <h3>Online Class Timing</h3>
+      <p>Saturday-Sunday</p>
+      <p>10AM - 12PM</p>
+      <p id="note">NOTE: Always Keep your Mic on mute and video On</p>
+    </div>
+
+
+
+    <div class="vdo">
+      <div class="vdo_div">
+        <video src="onlineclass.mp4" controls autoplay></video>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="last_sec">
+    <div class="teacher_sec">
+      <div class="name">
+        <h1>Our Teachers</h1>
+        <div class="teacher_name">
+          <h2> Miss.Charliee<span> Mr.Oliver</h2>
+          <h2> Miss.Sulivaan<span> Mr.Bob</h2>
+        </div>
+      </div>
+      <div class="timing_sec">
+        <h1>Batch Starts</h1>
+        <div class="batch_time">
+          <div class="kids_part">
+            <p class="kid">For Kids</p>
+            <p>Monday to Friday</p>
+            <p>3 PM - 5 PM</p>
+          </div>
+          <div class="adult_part">
+            <p class="adult">For Adults</p>
+            <p>Monday to Friday</p>
+            <p>10 AM - 2 PM</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="btn">
+      <a href="#"><input type="Submit" value="JOIN US"></a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer_content">
+    <div class="flogo">
+      <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-club-logo-design-template-7363f499d408b8d5aa636f25e135ce56_screen.jpg" alt="">
+    </div>
+    <div class="reach">
+        <h3>REACH US</h3>
+       <ul>
+        <li>+91 7007005129</li>
+       <li>123, Janta Colony
+        Mandsaur</li>
+        <li>artclub1423@gmail.com</li>
+       </ul>
+    </div>
+    <div class="supp">
+        <h3>SUPPORT</h3>
+        <ul>
+        <a href="#"><li>CONTACT US</li></a>
+        <a href="#"><li>FAQs</li></a>
+        <a href="#"><li>PRIVACY POLICY</li></a>
+        <a href="#"><li>TERMS AND SERVICES</li></a>
+        <a href="#"><li>HELP CENTER</li></a>
+    </ul>
+    </div>
+    <div class="follow">
+        <h3>FOLLOW US</h3>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+    </div>
+</div>
+<div class="copy">
+    <p>&copy; 2023 Art Club, All Rights Reserved</p>
+</div>
+</div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</html>

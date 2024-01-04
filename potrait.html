@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container{
+      position: relative;
+     }
+    .container::before{
+       content:""; 
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       background:url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/11/27/16/Matt%20Cain%20blond.jpg?width=1200') no-repeat  ;
+       background-size: cover;
+       opacity: 0.5;
+      
+    }
+    div .text{
+        font-size: 20px;
+        padding: 0px 30px; 
+        font-family:cursive; 
+        font-weight:700;
+         
+    }
+    .para, .para2, .para3, .para4{
+        position: relative;
+        display: flex;
+        padding: 10px;
+    }
+    h1{
+        position: relative;
+        font-family: jost,futura,gill sans,Arial,sans-serif;
+           color:black;
+           padding:14px 20px;
+           margin:0px;
+    }
+    .img1, .img2, .img3,.img4{
+        height: 200px;
+        width: 200px;
+        border:4px solid rgb(66, 18, 118);
+    }
+    .image{
+        margin:auto;
+    }
+ 
+    @media only screen and (max-width:820px){
+        .para,.para3{
+            flex-direction: column-reverse;
+        }
+       .image{
+        margin: auto;
+       }
+       .img1, .img2, .img3, .img4{
+        height: 350px;
+        width: 350px;
+       }
+       h1{
+        text-align: center;
+       }
+        .para2,.para4{
+            flex-direction: column;
+        }
+       .image{
+        margin: auto;
+       }
+    }
+    @media only screen and (max-width:430px){
+        .img1, .img2, .img3, .img4{
+        height: 200px;
+        width: 200px;
+       }
+    }
+</style>
+
+<body>
+    <div class="container">
+       <h1>What is portrait?</h1>
+       <div class="para">
+        <div class="text">
+            A portrait is a painting, photograph, sculpture, or other artistic representation of a person, in which the face and its expressions are predominant. The intent is to display the likeness, personality, and even the mood of the person. For this reason, in photography a portrait is generally not a snapshot, but a composed image of a person in a still position. A portrait often shows a person looking directly at the painter or photographer, in order to most successfully engage the subject with the viewer.
+        </div>
+        <div class="image">
+            <img class="img1" src="https://i.pinimg.com/1200x/47/cb/cf/47cbcfd3947883852879f9cf9186d3e2.jpg" alt="">
+        </div>
+        </div>
+
+      <h1>Techniques and Practice</h1>
+       <div class="para2">
+        <div class="image">
+            <img src="https://content.jdmagicbox.com/comp/jabalpur/a9/9999px761.x761.190430131133.f7a9/catalogue/kala-samrat-jabalpur-1y7s52rhnv.jpg" alt="" class="img2">
+        </div>
+        <div class="text">
+            A well-executed portrait is expected to show the inner essence of the subject (from the artist's point of view) or a flattering representation, not just a literal likeness. As Aristotle stated, "The aim of Art is to present not the outward appearance of things, but their inner significance; for this, not the external manner and detail, constitutes true reality."[1] Artists may strive for photographic realism or an impressionistic similarity in depicting their subject, but this differs from a caricature which attempts to reveal character through exaggeration of physical features. The artist generally attempts a representative portrayal, as Edward Burne-Jones stated, "The only expression allowable in great portraiture is the expression of character and moral quality, not anything temporary, fleeting, or accidental."
+        </div>
+       </div>
+
+       <h1>What Is A Portrait Art?</h1>
+       <div class="para3">
+        <div class="text">
+          Portraits are an artistic way of representing people. There are different modes of creating portraits; from traditional oil painting to sculptures, photographs, and other forms of media. In most cases, portraits show part figures, usually from head to shoulders, however, there is no restriction for having whole figures as portraits. They can be an individual portrait or a group portrait.
+        </div>
+         <div class="image"> 
+          <img src="https://m.media-amazon.com/images/I/81dvC26vSkL._AC_UF894,1000_QL80_.jpg" alt="" class="img3">
+        </div>
+         </div>
+  
+         <h1>What Makes A Picture A Portrait?</h1>
+  
+         <div class="para4">
+         <div class="image"> 
+          <img src="https://pbs.twimg.com/media/FfbdNnyWAAA0UtV.jpg:large" alt="" class="img4">
+      </div>
+          <div class="text">
+              Portrait photography is also known as portraiture. It is a kind of photography where the artist holds the camera upright in a way that the longer edge runs up and down; that’s a portrait orientation. The aim of portrait photography is to capture the essence and personality of the person or group being photographed, using several lighting effects, poses, and backdrops.
+          </div>
+         </div>
+      </div>
+  </body>
+  </html>
