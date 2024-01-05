@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QRcode</title>
     <script src="https://kit.fontawesome.com/00443d2abd.js" crossorigin="anonymous"></script>
 
     <style>
@@ -160,7 +160,7 @@
             cursor: pointer;
         }
 
-#phone {
+        #phone {
             text-align: center;
             display: none;
         }
@@ -238,28 +238,31 @@
         .mainhead {
             font-size: 30px;
         }
-        .formerror{
-                color:rgb(255, 0, 0);
-                font-size:14px;
-                font-family:monospace;
-                padding-left:20px;
-                font-weight: bold;
-            }
 
-     
-        /* For styling demo, not required */
-        @media only screen and (max-width:460px){
-           .QR{
-              flex-wrap: wrap;
-           }
+        .formerror {
+            color: rgb(255, 0, 0);
+            font-size: 14px;
+            font-family: monospace;
+            padding-left: 20px;
+            font-weight: bold;
         }
-        @media only screen and (max-width:315px){
-            #modal{
+
+
+        /* For styling demo, not required */
+        @media only screen and (max-width:460px) {
+            .QR {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media only screen and (max-width:315px) {
+            #modal {
                 padding: 10px;
             }
         }
-        @media only screen and (max-width:420px){
-            #phone input{
+
+        @media only screen and (max-width:420px) {
+            #phone input {
                 width: 160px;
                 font-size: 20px;
             }
@@ -303,7 +306,7 @@
                         <h1 id="time">10:00</h1><span>
                             <p id="min">minutes</p>
 
-</div>
+                    </div>
                 </div>
             </div>
             <h1>Pay With UPI ID/ Mobile Number</h1>
@@ -329,98 +332,98 @@
                         <div class="formerror"></div>
 
                     </div>
-                </div>
-                    <div class="pay">
-                        <div class="paynow" onclick="money()">
-                            <input type="submit" value="Pay Now">
-                        </div>
-                    </div>
-                </form>
-
-
             </div>
+            <div class="pay">
+                <div class="paynow" onclick="money()">
+                    <input type="submit" value="Pay Now">
+                </div>
+            </div>
+            </form>
+
+
         </div>
+    </div>
 
-        <!-- <div id="succeed"> -->
-        <!-- </div> -->
+    <!-- <div id="succeed"> -->
+    <!-- </div> -->
 
-        <script>
-            let minute = 0;
-            let seconds = 10;
-            setInterval(function () {
-                if (minute == 0 && seconds == 1) {
-                    document.getElementById("time").innerHTML = "00:00";
-                    document.getElementById("image").style.filter = "blur(2px)";
-                    document.getElementById("refresh_btn").style.display = "block";
+    <script>
+        let minute = 0;
+        let seconds = 10;
+        setInterval(function () {
+            if (minute == 0 && seconds == 1) {
+                document.getElementById("time").innerHTML = "00:00";
+                document.getElementById("image").style.filter = "blur(2px)";
+                document.getElementById("refresh_btn").style.display = "block";
 
-                }
-                else {
-                    seconds--;
-                    if (seconds == 0) {
-                        minute--;
-                        seconds = 10;
+            }
+            else {
+                seconds--;
+                if (seconds == 0) {
+                    minute--;
+                    seconds = 10;
 
 
-                        if (minute == 0) {
-                            minute = minute;
-
-                        }
+                    if (minute == 0) {
+                        minute = minute;
 
                     }
-                    document.getElementById("time").innerHTML = minute + ":" + seconds;
 
                 }
+                document.getElementById("time").innerHTML = minute + ":" + seconds;
 
-            }, 1000)
-
-            function btn() {
-                // document.getElementById("time").innerHTML = "1:00";
-                minute = 0;
-                seconds = 10;
-                document.getElementById("image").style.filter = "none";
-                document.getElementById("refresh_btn").style.display = "none";
-            }
-            function upi_no() {
-                document.getElementById("phone").style.display = "block";
-                document.getElementById("check_icon").style.background = "#0357de";
-                document.getElementById("phone").style.padding = "20px";
             }
 
+        }, 1000)
 
-        </script>
-        <script>
-            function setError(id, error) {
-                element = document.getElementById(id);
-                element.getElementsByClassName('formerror')[0].innerHTML = error;
+        function btn() {
+            // document.getElementById("time").innerHTML = "1:00";
+            minute = 0;
+            seconds = 10;
+            document.getElementById("image").style.filter = "none";
+            document.getElementById("refresh_btn").style.display = "none";
+        }
+        function upi_no() {
+            document.getElementById("phone").style.display = "block";
+            document.getElementById("check_icon").style.background = "#0357de";
+            document.getElementById("phone").style.padding = "20px";
+        }
+
+
+    </script>
+    <script>
+        function setError(id, error) {
+            element = document.getElementById(id);
+            element.getElementsByClassName('formerror')[0].innerHTML = error;
+        }
+        function clearError() {
+            errors = document.getElementsByClassName('formerror');
+            for (let item of errors) {
+                item.innerHTML = "";
             }
-            function clearError() {
-                errors = document.getElementsByClassName('formerror');
-                for (let item of errors) {
-                    item.innerHTML = "";
-                }
-            }
-            function validateform() {
-                var returnval = true;
-                clearError();
-                var phone = document.forms['myform']["fphone"].value;
-                if (phone.length != 10) {
-                    setError("phone", "Phone Number is not valid");
-                    returnval = false;
-                }
-
-                return returnval;
+        }
+        function validateform() {
+            var returnval = true;
+            clearError();
+            var phone = document.forms['myform']["fphone"].value;
+            if (phone.length != 10) {
+                setError("phone", "Phone Number is not valid");
+                returnval = false;
             }
 
+            return returnval;
+        }
 
 
-            function money() {
-                if (validateform() == true) {
-                    
-                    window.open("succeed.html");
-                }
+
+        function money() {
+            if (validateform() == true) {
+
+                window.open("succeed.html");
             }
+        }
 
-        </script>
+    </script>
 </body>
 
 </html>
